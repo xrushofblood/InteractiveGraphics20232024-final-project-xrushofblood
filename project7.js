@@ -319,8 +319,6 @@ function SimTimeStep(dt, positions, velocities, springs, stiffness, damping, gra
 
     // Handle collisions with the box walls
     for (var i = 0; i < positions.length; i++) {
-        if (pinnedParticles.includes(i) || i === selVert) continue; // Skip pinned particles and held vertex
-
         // x-axis
         if (positions[i].x < -boxSize) {
             positions[i].x = -boxSize;
